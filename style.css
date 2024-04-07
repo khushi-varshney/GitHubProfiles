@@ -1,0 +1,123 @@
+*{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+body{
+    min-height:80vh;
+    background: linear-gradient(-45deg, lightpink, lightseagreen, rgb(245, 157, 94));
+    background-size: 400% 400%;
+    animation:gradient 4s ease infinite;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+input{
+    background-color: antiquewhite;
+    color:brown;
+    width: 50vw;
+    padding:0.8vw;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 7%;
+    box-shadow: 5px 5px 5px 5px burlywood;
+}
+input::placeholder{
+    color:cadetblue;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.card{
+    padding:0px;
+    margin:0px;
+    max-width: 200vw;
+    border-radius: 20%;
+    border: 5px solid blueviolet;
+    background-image: linear-gradient(lightgrey,pink, black);
+    display: flex;
+    animation: animate 5s ease-in-out 1s infinite;
+}
+.avatar{
+    background: linear-gradient(-45deg,red,yellow,lightgrey,green);
+    background-size: 400% 400%;
+    animation:gradient 4s ease infinite;
+    height:20vh;
+    width:14vw;
+    border-radius:50%;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+.info{
+    margin-left:2px;
+    color:brown;
+}
+.info h2{
+    color:black;
+    text-align: left;
+}
+.info p{
+    margin:0px;
+    color: blueviolet;
+    font-weight: 400;
+    font-size:1.2rem;
+}
+.info ul{
+    margin:0px;
+    padding:0px;
+    display:flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.info ul li{
+    font-size: 1.5rem;
+    margin:0px;
+    padding-left: 6px;
+}
+@keyframes animate {
+    from{
+        transform: scale(90%);
+    }
+    to{
+        transform: scale(95%);
+    }
+    
+}
+.repo{
+    color: black;
+    font-size:1rem;
+    text-decoration: none;
+    border-radius:5px;
+    display: inline-block;
+}
+@media screen and (max-width:700px) and (min-width:100px){
+    .card{
+        animation: none;
+        height:100vh;
+        width:80vw;
+    }
+    .info p{
+        font-size: 2.6vw;
+    }
+    .info ul li{
+        padding:0px;
+        font-size: 2vw;
+        margin:0px;
+    }
+    #repos{
+        width:50vw;
+        height: 60vh;
+        overflow: scroll;
+    }
